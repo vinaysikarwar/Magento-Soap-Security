@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <WTC_SoapSecurity>
+      <version>0.1.0</version>
+    </WTC_SoapSecurity>
+  </modules>
+  <global>
+    <helpers>
+      <soapsecurity>
+        <class>WTC_SoapSecurity_Helper</class>
+      </soapsecurity>
+    </helpers>
+	<models>
+	  <soapsecurity>
+		<class>WTC_SoapSecurity_Model</class>
+		<resourceModel>soapsecurity_mysql4</resourceModel>
+	  </soapsecurity>
+			<api>
+				<rewrite>
+					<user>WTC_SoapSecurity_Model_Api_User</user>
+				</rewrite>
+			</api>
+	</models>
+  </global>
+</config> 
